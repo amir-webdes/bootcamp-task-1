@@ -1,0 +1,169 @@
+/* 
+=== FONTS ===
+*/
+@font-face {
+  font-family: "vazir";
+  font-weight: 400;
+  src: url("../assets/fonts/Vazirmatn-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "vazir";
+  font-weight: 700;
+  src: url("../assets/fonts/Vazirmatn-Bold.woff2") format("woff2");
+}
+
+/* 
+=== GLOBAL STYLES ===
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: #1e1e1e;
+  --clr-secondary: #696969;
+  --clr-btn: #219f95;
+  --clr-blue: #234894;
+  --clr-bgc-blue: #afcedd;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "vazir";
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.main-section {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: var(--clr-btn);
+  border: transparent;
+  color: white;
+  font-family: "vazir";
+  padding: 1.5rem 2.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--clr-blue);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+/* 
+=== PROJECT STYLES ===
+*/
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  padding: 3rem 0;
+}
+
+.panel--cards {
+  background-color: rgb(33, 159, 149, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.panel--title {
+  padding: 1rem 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.cards__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.cards__header__title {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--clr-blue);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.number {
+  background-color: var(--clr-bgc-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+.date {
+  color: var(--clr-secondary);
+}
+
+
+.cards__body__title {
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cards__body__title span {
+  color: var(--clr-secondary);
+}
+
+.cards__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards__user__info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-photo {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
